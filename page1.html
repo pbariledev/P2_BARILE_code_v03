@@ -7,10 +7,6 @@
 <!--icon de l'onglet-->
         <link rel="icon" href="images/logo/Booki.png">
 <!-- lien vers les feuilles de styles-->               
-                <!--mien vers la feuille de style tablette de 992 à 768-->
-                <link rel="stylesheet" media="screen and (min-width:768px) and (max-width:992px)" href="css/mquerry_tab.css" >
-                <!--viewport mobil inf à 768-->
-                <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mquerry_mob.css" >
                 <!--lien vers la feuille normalize-->
                 <link rel="stylesheet" href="css/normalize.css">
                 <!--lien vers la feuille de style-->
@@ -34,85 +30,64 @@
                             </ul>
                         </nav>
                     </div>
-                    <div id="slogan">
-                        <h1>Trouvez votre hébergement <span>pour les vacances de rêve</span></h1>
-                        <h2>En plein centre ville ou en pleine nature</h2>
-                    </div>
                 </div>
             </header>
-            <section id="section_formulaire"> <!--section formulaire-->    
-                <div id="formulaire">
-                    <form action="traitement_php" class="ensbl_loc">
-                        <div id="loc_map" class="flex"><i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <input type="search" value="Marseille, France" name="rchville" id="rchville">
-                        <input type="submit" value="Recherche" id="bouton_recherche" class="parent0">
-                        <div class="child0">
-                            <div class="search"><i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                        </div>
-                    </form> 
+            <section id="section_formulaire_filtres"> <!--partie formulaire-->    
+                <div id="slogan">
+                    <h1>Trouvez votre hébergement <span>pour des vacances de rêve</span></h1>
+                    <h2>En plein centre ville ou en pleine nature</h2>
                 </div>
-            </section>
-            <section id="section_filtres"><!--section filtres-->
-                    <div id="banniere_filtres">
-                        <form action="select" class="ensbl_filtres">
-                            <h3 id="parent_filtre">Filtres</h3>
-                            <div class="container">
-                                        <div id="money">
-                                            <div class="parent">
-                                                <div class="child1">
-                                                    <i class="fa-solid fa-money-bill-wave"></i>
-                                                </div>                      
-                                                <div class="child2">
-                                                        <input class="bouton_filtre" id="bouton1" type="checkbox">
-                                                        <label for="bouton1">Economique</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="famille">
-                                            <div class="parent">
-                                                <div class="child1">
-                                                    <i class="fa-solid fa-child"></i>
-                                                </div>                      
-                                                <div class="child2">
-                                                        <input class="bouton_filtre" id="bouton2" type="checkbox">
-                                                        <label for="bouton2">Familial</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="romantique">
-                                            <div class="parent">
-                                                <div class="child1">
-                                                    <i class="fa-solid fa-heart"></i>
-                                                </div>                      
-                                                <div class="child2">
-                                                        <input class="bouton_filtre" id="bouton3" type="checkbox">
-                                                        <label for="bouton3">Romantique</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="animaux">
-                                            <div class="parent">
-                                                <div class="child1">
-                                                    <i class="fa-solid fa-dog"></i>
-                                                </div>                      
-                                                <div class="child2">
-                                                        <input class="bouton_filtre" id="bouton4" type="checkbox">
-                                                        <label for="bouton4">Animaux autorisés</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                        </form>  
+                <form class="ensbl_loc">
+                    <div id="loc_map" class="flex">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <input type="search" value="Marseille, France" name="rchville" id="rchville">
+                    <button id="bouton_recherche" class="parent0">
+                        Recherche
+                    </button>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form> 
+                <form class="ensbl_filtres"><!--partie filtres-->
+                    <h3 id="parent_filtre">Filtres</h3>
+                    <div id="money">
+                        <div class="parent">
+                            <button class="bouton_filtre">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                <label for="bouton1">Economique</label>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="famille">
+                        <div class="parent">
+                            <button class="bouton_filtre">
+                                <i class="fa-solid fa-child"></i>
+                                <label for="bouton1">Familial</label>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="romantique">
+                        <div class="parent">
+                            <button class="bouton_filtre">
+                                <i class="fa-solid fa-heart"></i>
+                                <label for="bouton1">Romantique</label>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="animaux">
+                        <div class="parent">
+                            <button class="bouton_filtre">
+                                <i class="fa-solid fa-dog"></i>
+                                <label for="bouton1">Animaux autorisés</label>
+                            </button>
+                        </div>
+                    </div>
+                </form>  
                     <div class="information">
                         <div class="child3"><i class="fa-solid fa-info"></i></div>
                         <p>Plus de 500 logements sont disponibles dans cette ville.</p>
                     </div>             
-                    </div>
             </section>
             <section id="hebergements"><!--section logement-->
                 <article id="log"><!--hebergement-->
@@ -130,7 +105,7 @@
                                     </div>
                                     <div class="star"> <!-- STARS -->
                                         <div class="star_bleu">
-                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star etoile"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>

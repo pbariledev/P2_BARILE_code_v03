@@ -29,7 +29,6 @@ body /*definition des styles principaux de la page*/
 {
     background: none; /*definition du fond de page*/
     font-family: 'Raleway', sans-serif, sans-serif; /*police de la page*/
-    color: black; /*couleur de la police*/
     max-width: 1440px;
     margin: auto;
 }
@@ -67,7 +66,7 @@ nav ul /*placement des liens et sans bouton*/
 nav a /*style des liens*/
 {
     font-size: 16px;
-    color: #181818;
+    color: black;
     padding-top: 30px;
     padding-left:20px;
     padding-right: 20px;
@@ -76,10 +75,10 @@ nav a /*style des liens*/
 }
 nav a:hover /*coloration du lien au survol*/
 {
+    width: 100%;
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
-
 /*======================================FORMULAIRE============================*/
 .search
 {
@@ -130,6 +129,10 @@ nav a:hover /*coloration du lien au survol*/
     font-size: 20px;
     font-weight: bold;
 }
+#rchville:focus{
+
+    outline: none;
+}
 #bouton_recherche /*style bouton recherche*/
 {
     background-color: #0065FC;
@@ -144,6 +147,7 @@ nav a:hover /*coloration du lien au survol*/
 {
     box-shadow: 0px 5px 20px #999;
     font-weight: bold;
+    cursor: pointer;
 }
 /*======================================FILTRES==============================*/
 .ensbl_filtres
@@ -179,6 +183,10 @@ nav a:hover /*coloration du lien au survol*/
     border-radius: 23px;
     color: #0065FC;
 }
+.filters{
+    display: flex;
+
+}
 .filter_txt
 {
     padding: 0px 15px 0px 15px;
@@ -187,6 +195,7 @@ nav a:hover /*coloration du lien au survol*/
   {
     background-color: #0065FC;
     color: white;
+    cursor: pointer;
 
   }
 .information
@@ -293,7 +302,7 @@ figure
 }
 .card_log:hover
 {
-    box-shadow: 0px 5px 20px rgb(24, 23, 23);
+    box-shadow: 0px 5px 20px rgb(114, 114, 114);
 }
 
 
@@ -341,7 +350,7 @@ figure
 }
 .card_pop:hover
 {
-    box-shadow: 0px 5px 20px rgb(24, 23, 23);
+    box-shadow: 0px 5px 20px rgb(114, 114, 114);
 }
 /*============contener log et pop=============*/
 #hebergements

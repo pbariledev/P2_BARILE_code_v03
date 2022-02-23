@@ -45,6 +45,10 @@
         border-bottom: 4px solid #0065FC; 
         font-weight: bold;   
     }
+    #logo_nav nav li:hover a{
+        color: #0065FC;
+    }
+
     #logo_nav nav a:hover
     {
         border-top: none;

@@ -6,27 +6,33 @@
 /* POLICE =================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
-h1 
+h2 
 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 4px;
 }
-h2
+h3
 {
     font-size: 16px;
     font-weight: lighter;
     margin-top: 4px;
 }
-h3
+h4
 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 900;
-    margin: 4px 0px 0px 0px;
+    margin: 4px 10px 0px 0px;
 
 }
 /* POLICE =================================================================*/
-
+body /*definition des styles principaux de la page*/
+{
+    background: none; /*definition du fond de page*/
+    font-family: 'Raleway', sans-serif, sans-serif; /*police de la page*/
+    color: black; /*couleur de la police*/
+    max-width: 1440px;
+    margin: auto;
+}
 #bloc_page /*largeur de la page et marge+auto=centré*/
 {
     width: 100%;
@@ -34,15 +40,7 @@ h3
     padding-top: 21px;
 
 }
-body /*definition des styles principaux de la page*/
-{
-    background: none; /*definition du fond de page*/
-    font-family: 'Raleway', sans-serif, sans-serif; /*police de la page*/
-    color: black; /*couleur de la police*/
-}
-
 /*==============HEADER========================================================*/
-
 #titre_principal /*distribution du titre principal*/
 {
     display: flex;
@@ -65,7 +63,6 @@ nav ul /*placement des liens et sans bouton*/
     list-style-type: none ;
     display: flex;
     justify-content: space-around;
-
 }
 nav a /*style des liens*/
 {
@@ -88,7 +85,10 @@ nav a:hover /*coloration du lien au survol*/
 {
     display: none;
 }
-
+.fa-solid
+{
+    font-size: 20px;
+}
 #formulaire /*distribution du formulaire*/
 {
     display: flex;
@@ -138,31 +138,56 @@ nav a:hover /*coloration du lien au survol*/
     color: white;
     border: none;
     border-radius: 0px 10px 10px 0px;
-    font-weight: bold;
-    padding-left: 16px;
+    padding-left: 18px;
 }
 #bouton_recherche:hover
 {
     box-shadow: 0px 5px 20px #999;
+    font-weight: bold;
 }
 /*======================================FILTRES==============================*/
 .ensbl_filtres
 {
     display: flex ;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: baseline;
-    justify-content: flex-start;
+    align-items: center;
 }
 .bouton_filtre /*alignement des elements filtres-parent*/
 {
+    display: flex;
+    align-items: center;
     border: 2px solid #F2F2F2;
-    height: 20px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 0px;
 }
- .bouton_filtre:hover
+.bouton_filtre .ico-filter
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEEBFF;
+    border: 2px solid #DEEBFF;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 23px;
+    color: #0065FC;
+}
+.filter_txt
+{
+    padding: 0px 15px 0px 15px;
+}
+.bouton_filtre:hover
   {
     background-color: #0065FC;
     color: white;
+
   }
 .information
 {
@@ -170,58 +195,26 @@ nav a:hover /*coloration du lien au survol*/
     text-align: center;
     align-items: center;
 }
-.child3
+.information .fa-info
 {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: blue;
     width: 25px;
     height: 25px;
     border-radius: 12px;
     border: 2px solid #F2F2F2;
-    align-items: center;
-    justify-content: center;
-
+    font-size: 12px;
+    font-weight: bold;
 }
-/*======================================cadre Hebergement à XXXXXX==============================*/
-/*CARDS logement =================================================================*/
-.card_log /*dimension et style de la carte  ----- mettre le tout en display block*/
+/*commun card=================================================================*/
+.card-title h4
 {
-    width: 260px;
-    margin-bottom: 40px;
-    background-color: white;
-    box-shadow: 0px 5px 20px #999;
-    border-radius: 20px;
-    border: 4px solid white;
+    font-size: 16px;
+    margin: 5px 0px 0px 0px;
 }
 
-.card_log-image
-{
-    width: 100%;
-    height: 59%;
-}
-.card_image_log
-{
-    border-radius: 20px 20px 0px 0px;
-    width: 250px;
-    height: 130px;
-    object-fit: cover;
-}
-.card_log a /*style lien*/
-{
-    color: #333; 
-    text-decoration: none;
-}
-.card_log-body /*mise en forme dans la card*/
-{
-    display: flex;
-    padding: 8px;
-    flex-direction: column;
-}
-.card_log:hover
-{
-    box-shadow: 0px 5px 20px rgb(24, 23, 23);
-}
-/*--------------------commun card---------------------*/
 .card-price
 {
     font-size: 14px;
@@ -231,47 +224,107 @@ nav a:hover /*coloration du lien au survol*/
 {
     font-weight: bold;
 }
+figure
+{
+    margin: 0px;
+}
+.star .fa-solid
+{
+    font-size: 12px;
+}
+
 .star {
     margin: 4px 0px 0px 0px ;
     display: flex;
     
-}
-.star_bleu
-{
-    color: #0065FC;
 }
 .star_grey
 {
     color: #999;
 }
 
-
-/*CARDS populaire =================================================================*/
-.card_pop /*dimension et style de la carte  ----- mettre le tout en display block*/
+.star_blue
 {
-    width: 380px;
-    margin: 20px;
+    color: #0065FC;
+}
+
+/*CARDS hebergement =================================================================*/
+#log
+{
+    width: 65%;
+    min-width: 640px;
+    margin-right: 1.5%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    padding: 23px 40px 23px 40px;
+}
+.card_log /*dimension et style de la carte  ----- mettre le tout en display block*/
+{
+    width: 30%;
     background-color: white;
     box-shadow: 0px 5px 20px #999;
     border-radius: 20px;
     border: 4px solid white;
-    height: 140px;
+    margin-bottom: 40px;
 }
-.card_pop_lign
+.card_image_log
+{
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.card_log a /*style lien*/
+{
+    color: #333; 
+    text-decoration: none;
+}
+#body_card_log
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card_log-body /*mise en forme dans la card*/
+{
+    display: flex;
+    padding: 0px 8px 0px 8px;
+    flex-direction: column;
+}
+.card_log:hover
+{
+    box-shadow: 0px 5px 20px rgb(24, 23, 23);
+}
+
+
+/*CARDS populaire =================================================================*/
+#pop
+{
+    width: 32%;
+    min-width: 330px;
+    margin-left: 1.5%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    padding: 23px 40px 23px 40px;
+}
+.card_pop /*dimension et style de la carte  ----- mettre le tout en display block*/
+{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 20px #999;
+    border-radius: 20px;
+    border: 4px solid white;
+    margin-bottom: 40px;
+}
+.card_pop figure
 {
     display: flex;
 }
-
-.card_pop-image
-{
-    width: 130px;
-    height: 140px;
-}
 .card_image_pop
 {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 15px 0px 0px 15px;
     width: 130px;
-    height: 130px;
+    height: 145px;
     object-fit: cover;
 }
 .card_pop a /*style lien*/
@@ -296,416 +349,17 @@ nav a:hover /*coloration du lien au survol*/
 display: flex;
 width: 100%;
 }
-#log
-{
-    width: 66%;
-    min-width: 640px;
-    margin-right: 20px;
-    border-radius: 20px;
-    background-color: #F2F2F2;
-    padding: 20px;
-}
-#pop
-{
-    width: 33%;
-    min-width: 450px;
-    margin-left: 20px;
-    border-radius: 20px 20px 20px 20px;
-    background-color: #F2F2F2;
-    padding: 20px;
-}
+
 #title_pop
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#body_card_log
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
 #body_card_pop
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-/*=====================================================================================================*/
-/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
-/*=====================================================================================================*/
 
-@media all and (min-width: 768px) and (max-width: 992px)
-{
-body /*largeur de la page et marge+auto=centré*/
-{
-    max-width: 992px;
-}
-h1
-{
-    width: 100%;
-    text-align: center;
-}
-h2
-{
-    width: auto;
-    text-align: center;
-}
-    #logo_nav img /*dimension du logo*/
-{
-    width: 200px;
-}
-/*--------------------header--------------------*/
-#logo_nav 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-nav
-{
-    width:100%;
-}
-nav ul 
-{
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around
-}
-nav li 
-{
-    width: 50%;
-    text-align: center;
-    border-bottom: 4px solid #F2F2F2;
-}
-nav a /*style des liens*/
-{
-    font-size: 26px;
-    color: #181818;
-    padding-top: 20px;
-    text-decoration: none;
-    border-bottom: none;
-}
-nav li:hover /*coloration du lien au survol*/
-{
-    color: #0065FC;
-    border-top: none;
-    border-bottom: 4px solid #0065FC; 
-    font-weight: bold;   
-}
-nav a:hover /*coloration du lien au survol*/
-{
-    border-top: none;
-}
-/*--------------------Section formaulaire--------------------*/
-#formulaire /*centrer le formulaire*/
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#section_formulaire_filtres
-{
-    display: flex;
-    justify-content: center;
-}
-/*--------------------section logement--------------------*/
-
-#hebergements
-{
-display: flex;
-flex-direction: column-reverse;
-width: 100%;
-}
-#log 
-{
-    width: 100%;
-    background-color: transparent;
-}
-#pop
-{
-    width: 100%;
-    padding: 0px 5px 20px 5px;
-}
-#body_card_pop {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card_pop
-{
-margin: 10px;
-}
-.card_pop_lign {
-    width: 370px;
-}
-
-} /*fermeture mq_tab*/
-/*=====================================================================================================*/
-/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
-/*=====================================================================================================*/
-@media all and (max-width: 768px)
-{
-*
-h1 {
-    display: flex;
-    width: auto;
-    text-align: center;
-    font-size: 50px;
-    flex-direction: column;
-    margin: 10px;
-}
-h2
-{
-    width: auto;
-    text-align: center;
-    font-size: 28px;
-    margin: 5px;
-    margin-bottom: 20px;
-
-}
-    #logo_nav img /*dimension du logo*/
-{
-    width: 200px;
-    padding: 0px;
-}
-#bloc_page
-{
-    padding: 0px;
-}
-/*--------------------header--------------------*/
-#logo_nav 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-nav
-{
-    width:100%;
-}
-nav ul 
-{
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around
-}
-nav li 
-{
-    width: 50%;
-    text-align: center;
-    border-bottom: 4px solid #F2F2F2;
-}
-nav a /*style des liens*/
-{
-    font-size: 30px;
-    color: #181818;
-    padding-top: 0px;
-    text-decoration: none;
-    border-bottom: none;
-}
-nav li:hover /*coloration du lien au survol*/
-{
-    color: #0065FC;
-    border-top: none;
-    border-bottom: 4px solid #0065FC; 
-    font-weight: bold;   
-}
-nav a:hover /*coloration du lien au survol*/
-{
-    border-top: none;
-}
-/*--------------------Section formaulaire--------------------*/
-#formulaire /*centrer le formulaire*/
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.ensbl_loc {
-    height: 72px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px 20px 20px 20px;
-}
-#loc_map {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 70px;
-    height: 70px;
-}
-#rchville {
-    height: 70px;
-    padding-left: 20px;
-    font-size: 28px;
-}
-#bouton_recherche
-{
-    display: none;
-}
-.search
-{
-    display: flex;
-    width: 72px;
-    height: 72px;
-    color: white;
-    border: none;
-    border-radius: 0px 20px 20px 0px;
-    font-weight: bold;
-    font-size: 28px;
-    align-items: center;
-    background-color: #0065FC;
-    justify-content: center;
-}
-.fa-location-dot
-{
-    font-size: 28px;
-}
-/*--------------------section filtres--------------------*/
-#parent_filtre
-{
-    font-size: 30px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-}
-.ensbl_filtres
-{
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-}
-.parent0 /*parent pour placement champs et icon*/
-  {
-    display: flex;
-    align-items: center;
-}
-.child1 
-{
-    border-radius: 35px;
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-}
-label 
-{
-    padding: 15px 33px 15px 90px;
-    border-radius: 100px;
-    font-size: 26px;
-    height: 70px;
-}
-.parent
-{
-    margin-bottom: 20px;
-}
-.child3 
-{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 24px;
-    margin-left: 40px;
-}
-p
-{
-    font-size: 24px;
-}
-/*--------------------section logement--------------------*/
-/*--------------------commun card---------------------*/
-h3
-{
-    font-size: 28px;
-}
-.card-price
-{
-    font-size: 24px;
-    padding-top: 10px;
-}
-.star
-{
-    font-size: 30px;
-}
-/*--------------------card populaire---------------------*/
-#hebergements
-{
-display: flex;
-flex-direction: column-reverse;
-width: 100%;
-}
-#pop
-{
-    width: 100%;
-    padding: 40px;
-    margin: 0px;
-    border-radius: 0px;
-}
-.fa-chart-line
-{
-    font-size: 32px;
-}
-#body_card_pop {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
-.card_pop
-{
-    margin: 10px 0px 10px 0px;
-    width: 100%;
-    height: 246px;
-    padding: 4px;
-}
-.card_pop_lign 
-{
-    display: flex;
-    width: 100%;
-}
-.card_pop-image
-{
-    width: 40%;
-    height: auto;
-}
-.card_image_pop
-{
-    border-radius: 20px 0px 0px 20px;
-    width: 230px;
-    height: 230px;  
-}
-.card_pop-body
-{
-    width: 66%;
-    padding: 15px 30px 20px 30px;
-}
-/*--------------------card hebergement---------------------*/
-
-#log 
-{
-    width: 100%;
-    background-color: transparent;
-    padding: 40px;
-    margin: 0px;
-    border-radius: 0px;
-}
-#body_card_log 
-{
-    display: flex;
-    flex-direction: column;
-}
-.card_log
-{
-    width: 100%;
-}
-.card_image_log
-{
-    width: 100%;
-    height: 250px;
-}
-}/*fermeture mq_mobil*/

@@ -3,9 +3,18 @@
 /*=====================================================================================================*/
 @media all and (max-width: 768px)
 {
-#bloc_page /*largeur de la page et marge+auto=centré*/
+body /*largeur de la page et marge+auto=centré*/
 {
     text-align: center;
+    padding: 0px;
+}
+ h2{
+    font-size: 22px;
+    padding: 20px 20px 10px 0px;
+    text-align: left;
+}
+header, #section_formulaire_filtres, #hebergements, #activites
+{
     padding: 0px;
 }
 
@@ -54,11 +63,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 20px 20px 20px;
-}
-#slogan h2{
-    font-size: 22px;
-    text-align: left;
-    margin-bottom: 10px;
 }
 #slogan h3{
     font-size: 15px;
@@ -182,13 +186,10 @@ width: 100%;
 /*--------------------card populaire---------------------*/
 #pop{
     width: 100%;
+    min-width: 0px;
     border-radius: 0px;
     padding: 0px 20px 0px 20px;
     margin: 0px;
-}
-#title_pop h2{
-    font-size: 22px;
-    padding: 20px 20px 10px 0px;
 }
 #title_pop .fa-solid{
     font-size: 20px;
@@ -208,14 +209,9 @@ width: 100%;
     width: 100%;
     min-width: 0px;
     border-radius: 0px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 10px 20px;
     margin: 0px;
     background-color: white;
-}
-#log h2{
-    font-size: 22px;
-    padding: 20px 20px 20px 0px;
-    text-align: left;
 }
 .card_heb{
     width: 100%;
@@ -229,6 +225,11 @@ width: 100%;
     margin: 0px 0px 10px 10px;
 }
 #log h4{
+    font-size: 20px;
+    text-align: left;
+    padding: 0px 0px 5px 0px;
+}
+#card-title h4{
     font-size: 15px;
     text-align: left;
     padding: 0px 0px 5px 0px;
@@ -239,4 +240,49 @@ width: 100%;
     flex-direction: column;
 }
 /*fermeture mq_mobil*/
+}
+/*--------------------card activités---------------------*/
+#activites{
+    padding: 0px 20px 0px 20px;
+    margin: 0px;
+    height: 1400px;
+}
+#body_card_activite{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#body_card_activite a{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+}
+.card_act h4{
+    text-align: left;
+}
+/*footer =================================================================*/
+#section_footer{
+    padding: 0px   ;
+
+}
+.level2{
+    text-align: start;
+}
+#ensbl_menu{
+    display: flex;
+    flex-direction: column;
+}
+#ensbl_menu ul{
+    width: 100%;
+}
+#ensbl_menu li{
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+#ensbl_menu a{
+    color: #333; 
+    text-decoration: none;
+}
+#ensbl_menu h4{
+    padding: 30px 0px 10px 0px;
 }

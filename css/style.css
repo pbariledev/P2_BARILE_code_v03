@@ -6,7 +6,7 @@
 /* POLICE =================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
-h2 
+h1, h2 
 {
     font-size: 22px;
     font-weight: bold;
@@ -21,8 +21,13 @@ h4
 {
     font-size: 18px;
     font-weight: 900;
-    margin: 4px 10px 0px 0px;
-
+}
+h5{
+    font-size: 20px;
+    text-align: left;
+    padding: 0px 0px 5px 0px;
+    margin: 0px;
+    
 }
 /* POLICE =================================================================*/
 body /*definition des styles principaux de la page*/
@@ -31,15 +36,15 @@ body /*definition des styles principaux de la page*/
     font-family: 'Raleway', sans-serif, sans-serif; /*police de la page*/
     max-width: 1440px;
     margin: auto;
-}
-#bloc_page /*largeur de la page et marge+auto=centré*/
-{
     width: 100%;
-    padding: 60px;
     padding-top: 21px;
-
 }
-/*==============HEADER========================================================*/
+header, #section_formulaire_filtres, #hebergements, #activites
+{
+    padding: 0px 60px 0px 60px;
+}
+
+    /*==============HEADER========================================================*/
 #titre_principal /*distribution du titre principal*/
 {
     display: flex;
@@ -65,12 +70,11 @@ nav ul /*placement des liens et sans bouton*/
 }
 nav a /*style des liens*/
 {
-    font-size: 16px;
+    font-size: 15px;
     color: black;
     padding-top: 30px;
     padding-left:20px;
     padding-right: 20px;
-
     text-decoration: none;
 }
 nav a:hover /*coloration du lien au survol*/
@@ -216,6 +220,7 @@ nav a:hover /*coloration du lien au survol*/
     border: 2px solid #F2F2F2;
     font-size: 12px;
     font-weight: bold;
+    margin-right: 10px;
 }
 /*commun card=================================================================*/
 .card-title h4
@@ -280,7 +285,7 @@ figure
 {
     border-radius: 15px 15px 0px 0px;
     width: 100%;
-    height: 120px;
+    height: 109px;
     object-fit: cover;
 }
 .card_log a /*style lien*/
@@ -310,7 +315,7 @@ figure
 #pop
 {
     width: 32%;
-    min-width: 330px;
+    min-width: 400px;
     margin-left: 1.5%;
     border-radius: 20px;
     background-color: #F2F2F2;
@@ -323,7 +328,7 @@ figure
     box-shadow: 0px 5px 20px rgb( 200, 200, 200);
     border-radius: 20px;
     border: 4px solid white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .card_pop figure
 {
@@ -332,8 +337,8 @@ figure
 .card_image_pop
 {
     border-radius: 15px 0px 0px 15px;
-    width: 130px;
-    height: 145px;
+    width: 109px;
+    height: 118px;
     object-fit: cover;
 }
 .card_pop a /*style lien*/
@@ -370,5 +375,95 @@ width: 100%;
     display: flex;
     flex-direction: column;
 }
+/*section activités =================================================================*/
+#activites{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+/*CARDS activités =================================================================*/
 
+#body_card_activite{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    height: 444px;
+}
+#body_card_activite a{
+    color: #333; 
+    text-decoration: none;
+    width: 22.36%;
+}
+.act_type1{
+    height: 444px;
+}
+.act_type2{
+    height: 235px;
+}
+.act_type3{
+    height: 164px;
+}
+.act_type4{
+    height: 196px;
+}
+.act_type5{
+    height: 205px;
+}
+.card_act {
+    background-color: white;
+    box-shadow: 0px 5px 20px #999;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    object-fit: cover;
+    height: inherit;
+}
+.card_act h4{
+    padding: 17px;
+    margin: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 16px;
+}
+.card_act img{
+    object-fit: cover;
+    height:100%;
+    border-radius: 20px;
+}
+/*footer =================================================================*/
+#section_footer{
+    background-color: #F2F2F2;
+    font-family: 'Raleway', sans-serif, sans-serif; /*police de la page*/
+    width: 100%;
+    margin-top: 55px;
+    padding: 40px 0px 40px 60px   ;
+
+}
+#section_footer ul,li, h4{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+#ensbl_menu{
+    display: flex;
+    justify-content: space-around;
+}
+#ensbl_menu ul{
+    width: 33%;
+}
+#ensbl_menu li{
+    padding-bottom: 15px;
+}
+#ensbl_menu a{
+    color: #333; 
+    text-decoration: none;
+}
 

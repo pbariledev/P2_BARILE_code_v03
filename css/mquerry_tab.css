@@ -2,7 +2,7 @@
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
 /*=====================================================================================================*/
 
-@media all and (min-width: 768px) and (max-width: 992px){
+@media all and (min-width: 769px) and (max-width: 992px){
 /*=====================================================================================================*/
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 /*=====================================================================================================*/
@@ -73,19 +73,6 @@ header, #section_formulaire_filtres, #hebergements, #activites {
 #activites {
     padding: 23px 40px 23px 40px;
     margin: 0px;
-}
-#body_card_activite {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#body_card_activite a {
-    width: 25%;
-    height: 200px;
-    margin: 15px;
-}
-.card_act h4 {
-    text-align: left;
 }
 /*footer =================================================================*/
 #section_footer {

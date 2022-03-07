@@ -7,35 +7,33 @@
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 /*=====================================================================================================*/
 
-body /*largeur de la page et marge+auto=centré*/
-{
+body {
     text-align: center;
     padding: 0px;
 }
- h2{
+ h2 {
     font-size: 22px;
     padding: 20px 20px 10px 0px;
     text-align: left;
 }
-header, #section_formulaire_filtres, #hebergements, #activites
-{
+header, #section_formulaire_filtres, #hebergements, #activites {
     padding: 0px;
 }
 /*======================================FORMULAIRE============================*/
-.ensbl_loc{
+.ensbl_loc {
     margin: auto;
 }
 /*======================================FILTRES==============================*/
-.ensbl_filtres{
+.ensbl_filtres {
     display: flex;
     flex-direction: column;
     margin: 20px 40px 0px 40px;
 }
-.ensbl_filtres h4{
+.ensbl_filtres h4 {
     padding: 20px;
     font-size: 28px;
 }
-.filters{
+.filters {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -45,17 +43,19 @@ header, #section_formulaire_filtres, #hebergements, #activites
 
 }
 /*commun card=================================================================*/
-#hebergements{
+#hebergements {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+
 }
-#log{
+#log {
     width: 100%;
+    background-color: white;
+
 }
-#pop{
+#pop {
     width: 100%;
     margin: 0px;
-    background-color: white;
 }
 #body_card_pop {
     display: flex;
@@ -63,29 +63,32 @@ header, #section_formulaire_filtres, #hebergements, #activites
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.card_pop{
+.card_pop {
     width: 40%;
 }
+.star {
+    justify-content: center;
+}
 /*--------------------card activités---------------------*/
-#activites{
-    padding: 0px;
+#activites {
+    padding: 23px 40px 23px 40px;
     margin: 0px;
 }
-#body_card_activite{
+#body_card_activite {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#body_card_activite a{
+#body_card_activite a {
     width: 25%;
     height: 200px;
     margin: 15px;
 }
-.card_act h4{
+.card_act h4 {
     text-align: left;
 }
 /*footer =================================================================*/
-#section_footer{
+#section_footer {
     padding: 20px;
     margin: 30px 0px 0px 0px;
 }

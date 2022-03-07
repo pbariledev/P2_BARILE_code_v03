@@ -1,20 +1,17 @@
 /*=====================================================================================================*/
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 /*=====================================================================================================*/
-@media all and (max-width: 768px)
-{
-body /*largeur de la page et marge+auto=centré*/
-{
+@media all and (max-width: 768px) {
+body {
     text-align: center;
     padding: 0px;
 }
- h2{
+ h2 {
     font-size: 22px;
     padding: 20px 20px 10px 0px;
     text-align: left;
 }
-header, #section_formulaire_filtres, #hebergements, #activites
-{
+header, #section_formulaire_filtres, #hebergements, #activites {
     padding: 0px;
 }
 
@@ -25,74 +22,72 @@ header, #section_formulaire_filtres, #hebergements, #activites
     flex-direction: column;
     align-items: center;
 }
-#logo_nav img{/*dimension du logo*/
+#logo_nav img {
     width: 100px;
     padding: 20px 0px 20px 0px;
 }
-#logo_nav nav{
+#logo_nav nav {
     width: 100%;
 }
-#logo_nav nav ul{
+#logo_nav nav ul {
     display: flex;
     width: 100%;
     padding: 0px;
 }
-#logo_nav nav li{
+#logo_nav nav li {
     width: 50%;
     text-align: center;
     padding-bottom: 12px;
     border-bottom: 3px solid #F2F2F2;
 }
-#logo_nav nav li:hover
-{
+#logo_nav nav li:hover {
     color: #0065FC;
     border-top: none;
     border-bottom: 3px solid #0065FC; 
 }
-#logo_nav nav li:hover a{
+#logo_nav nav li:hover a {
     color: #0065FC;
 }
 
-#logo_nav nav a:hover
-{
+#logo_nav nav a:hover {
     border-top: none;
 }
 /*--------------------form ensble_loc--------------------*/
-#slogan{
+#slogan {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 20px 20px 20px;
 }
-#slogan h3{
+#slogan h3 {
     font-size: 15px;
     text-align: left;
 }
-.ensbl_loc{
+.ensbl_loc {
     margin: 0px 0px 20px 20px;
     height: 50px;
     border: 2px solid #F2F2F2;
     border-radius: 15px 15px 15px 15px;
 }
-.fa-location-dot{
+.fa-location-dot {
     font-size: 120%;
 }
-#loc_map{
+#loc_map {
     width: 50px;
     height: 50px;
     border-radius: 15px 0px 0px 15px;
 
 }
-#bouton_recherche{
+#bouton_recherche {
     display: none;
 }
-#rchville{
+#rchville {
     width: 215px;
     font-size: 18px;
     padding-left: 15px;
     font-weight: bold;
 }
-.search{
+.search {
     display: flex;
     width: 50px;
     height: 50px;
@@ -105,30 +100,29 @@ header, #section_formulaire_filtres, #hebergements, #activites
     justify-content: center;
 }
 /*--------------------form ensbl_filtres--------------------*/
-.ensbl_filtres
-{
+.ensbl_filtres {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 0px 20px 20px;
 }
-#parent_filtre{
+#parent_filtre {
     font-size: 18px;
 
 }
-.ensbl_filtres div{
+.ensbl_filtres div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.bouton_filtre{
+.bouton_filtre {
     border: 2px solid #F2F2F2;
     height: 50px;
     font-size: 16px;
     border-radius: 25px;
     margin: 15px 20px 0px 0px ;
 }
-.filter_txt{
+.filter_txt {
     padding: 0px 10px 0px 10px;
 }
 .bouton_filtre .ico-filter {
@@ -136,18 +130,18 @@ header, #section_formulaire_filtres, #hebergements, #activites
     height: 50px;
     border-radius: 25px;
 }
-.bouton_filtre .fa-solid{
+.bouton_filtre .fa-solid {
     font-size: 120%;
 }
-.filters{
+.filters {
     display: flex;
 }
-.information{
+.information {
     display: flex;
     align-items: flex-start;
     padding: 0px 0px 20px 20px;
 }
-.information .fa-info{
+.information .fa-info {
     border: 2px solid #F2F2F2;
     border-radius: 12px;
     width: 25px;
@@ -156,56 +150,55 @@ header, #section_formulaire_filtres, #hebergements, #activites
     font-weight: bold;
     padding: 0px 10px 0px 10px;
 }
-.information p{
+.information p {
     text-align: left;
     font-size: 16px;
     margin: 0px;
     padding: 5px 0px 0px 5px;
 }
 /*--------------------section logement--------------------*/
-#hebergements
-{
+#hebergements {
 display: flex;
 flex-direction: column-reverse;
 width: 100%;
 }
-.card-title h4{
+.card-title h4 {
     text-align: left;
     font-size: 15px;
 }
-.card-price{
+.card-price {
     text-align: left;
     font-size: 12px;
 }
-.star .fa-solid{
+.star .fa-solid {
     font-size: 14px;
 }
 .card_heb{
     border-radius: 20px;
 }
 /*--------------------card populaire---------------------*/
-#pop{
+#pop {
     width: 100%;
     min-width: 0px;
     border-radius: 0px;
     padding: 0px 20px 0px 20px;
     margin: 0px;
 }
-#title_pop .fa-solid{
+#title_pop .fa-solid {
     font-size: 20px;
 }
-.card_image_pop{
+.card_image_pop {
     border: 2px solid white;
     width: 130px;
     height: 130px;
     border-radius: 20px 0px 0px 20px;
 }
-.card_pop-body{
+.card_pop-body {
     margin: 15px 20px 15px 15px ;
     padding: 0px;
 }
 /*--------------------card hébergement---------------------*/
-#log{
+#log {
     width: 100%;
     min-width: 0px;
     border-radius: 0px;
@@ -213,76 +206,76 @@ width: 100%;
     margin: 0px;
     background-color: white;
 }
-.card_heb{
+.card_heb {
     width: 100%;
 }
-.card_image_log{
+.card_image_log {
     border: 2px solid white;
     border-radius: 20px 20px 0px 0px;
     height: 120px;
 }
-.card_log-body{
+.card_log-body {
     margin: 0px 0px 10px 10px;
 }
-#log h4{
+#log h4 {
     font-size: 20px;
     text-align: left;
     padding: 0px 0px 5px 0px;
 }
-#card-title h4{
+#card-title h4 {
     font-size: 15px;
     text-align: left;
     padding: 0px 0px 5px 0px;
 
 }
-#body_card_log{
+#body_card_log {
     display: flex;
     flex-direction: column;
 }
 /*fermeture mq_mobil*/
 }
 /*--------------------card activités---------------------*/
-#activites{
+#activites {
     padding: 0px 20px 0px 20px;
     margin: 0px;
     height: 1400px;
 }
-#body_card_activite{
+#body_card_activite {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-#body_card_activite a{
+#body_card_activite a {
     width: 100%;
     height: 200px;
     margin-bottom: 25px;
 }
-.card_act h4{
+.card_act h4 {
     text-align: left;
 }
 /*footer =================================================================*/
-#section_footer{
+#section_footer {
     padding: 0px   ;
 
 }
-.level2{
+.level2 {
     text-align: start;
 }
-#ensbl_menu{
+#ensbl_menu {
     display: flex;
     flex-direction: column;
 }
-#ensbl_menu ul{
+#ensbl_menu ul {
     width: 100%;
 }
-#ensbl_menu li{
+#ensbl_menu li {
     padding-bottom: 15px;
     padding-left: 20px;
 }
-#ensbl_menu a{
+#ensbl_menu a {
     color: #333; 
     text-decoration: none;
 }
-#ensbl_menu h4{
+#ensbl_menu h4 {
     padding: 30px 0px 10px 0px;
 }
